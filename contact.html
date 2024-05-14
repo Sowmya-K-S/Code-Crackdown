@@ -51,15 +51,9 @@
 						</li>
 					</ul>
 				</div>
-				        <!-- toggle switch for light and dark theme -->
-						<div class="mobile-position">
-							<label class="theme-selector">
-							  <input type="checkbox" id="themeToggle">
-							  <i class="gg-sun"></i>
-							  <i class="gg-moon"></i>
-							</label>
-						  </div>
-						  <!-- //toggle switch for light and dark theme -->
+				<!-- mode changing button -->
+				<button style="border: none; background-color: transparent; font-size: 30px;" class="mode-change"><i id="mode" class='bx bx-sun'></i></button>
+				<!-- mode changing button -->
 			</nav>
 		</div>
 	  </header>
@@ -70,6 +64,57 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <!--bootstrap working//-->
 <!--/MENU-JS-->
+<script>
+	// Function to change mode
+  let mode_div = document.querySelector(".mode-change");
+  let mode = document.querySelector("#mode");
+  function setMode(mode) {
+	localStorage.setItem('mode', mode);
+  }
+  
+  // Function to retrieve the mode from localStorage
+  function getMode() {
+	return localStorage.getItem('mode');
+  }
+  
+  // Function to apply mode based on stored mode
+  function applyMode() {
+	let storedMode = getMode();
+	console.log(storedMode)
+	if (storedMode === 'dark' || storedMode === 'null' ) {
+	  enableDarkMode();
+	} else {
+	  enableLightMode();
+	}
+  }
+  
+  // Function to enable dark mode
+  function enableDarkMode() {
+	mode.classList.remove("bx-moon");
+	mode.classList.add("bx-sun");
+	setMode('dark'); // Store the mode
+  }
+  
+  // Function to enable light mode
+  function enableLightMode() {
+	mode.classList.remove("bx-sun");
+	mode.classList.add("bx-moon");
+  
+	setMode('light'); // Store the mode
+  }
+  
+  // Event listener for mode changer
+  mode_div.addEventListener('click', function () {
+	if (mode.classList.contains("bx-moon")) {
+	  enableDarkMode();
+	} else {
+	  enableLightMode();
+	}
+  });
+  
+  // Apply mode on page load
+  applyMode();
+  </script>
 <script>
 	$(window).on("scroll", function () {
 	  var scroll = $(window).scrollTop();
