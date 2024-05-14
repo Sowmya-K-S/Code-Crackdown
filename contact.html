@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body id="home">
 <section class=" w3l-header-4">
@@ -151,49 +154,6 @@ $(function () {
 });
 </script>
 <!-- disable body scroll which navbar is in active -->
-<!--theme switcher dark and light mode script-->
-<script>
-	const bodyElement = document.querySelector('body');
-	const themeToggle = document.querySelector('#themeToggle');
-	const darkModeMql = window.matchMedia('(prefers-color-scheme: dark)');
-  
-	const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : userPreference(darkModeMql);
-  
-	if (currentTheme) {
-	  bodyElement.classList.add(currentTheme);
-  
-	  if (currentTheme === 'dark') {
-		themeToggle.checked = true;
-	  }
-	}
-  
-	function userPreference(e) {
-	  if (e.matches) {
-		bodyElement.classList.add("dark");
-		return "dark"
-	  } else {
-		bodyElement.classList.remove("dark");
-		return ""
-	  }
-	}
-  
-	darkModeMql.addListener(userPreference);
-  
-	function themeSwitcher(e) {
-	  if (e.target.checked) {
-		bodyElement.classList.add('dark');
-		localStorage.setItem('theme', 'dark');
-	  } else {
-		bodyElement.classList.remove('dark');
-		localStorage.setItem('theme', '');
-	  }
-	}
-  
-	themeToggle.addEventListener('change', themeSwitcher);
-  </script>
-  <!--theme switcher dark and light mode script//-->
-
-
 
 <!-- breadcrumbs -->
 <section class="w3l-inner-banner-main">
@@ -218,8 +178,8 @@ $(function () {
             <div class="d-grid contact-view">
 
                 <div class="cont-details ">
-                    <h3 class="sub-title">Get in touch</h3> 
-                    <p class="para mt-3 mb-4">Consectetur adipisicing elit.Lorem ipsum dolor sit amet Dignissimos commodi laborum.</p>
+                    <h3 class="sub-title">Get in toach</h3> 
+                    <p class="para mt-3 mb-4"> For any queries Donot try to contact us. We will not respond</p>
                     
                     <div class="cont-top ">
                         <h6 class="mt-4 cont-left">Address:</h6>
@@ -260,7 +220,7 @@ $(function () {
             </div>
                 
             <div class="map-iframe mt-lg-5 mt-md-5 mt-sm-5 mt-4 pt-lg-2">
-                <iframe src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl" width="100%" height="300" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15579.930107201717!2d76.8800198!3d12.5173164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa0fa2477e217%3A0x7f46df666eecd99!2sPES%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1715693437014!5m2!1sen!2sin" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -271,7 +231,7 @@ $(function () {
 		<div class="grid-col-4 footer-top-29">
 			<div class="footer-list-29 footer-1">
 				<h2 class="footer-title-29">About Us</h2>
-<p class="para">Ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis repellendus nesciunt quam cupiditate explicabo modi non error consequatur sunt molestiae laboriosam adipisci voluptatem possimus</p>
+<p class="para">For any queries contact us. But we will not respond to you</p>
 				<div class="main-social-footer-29">
 					<a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
 					<a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
