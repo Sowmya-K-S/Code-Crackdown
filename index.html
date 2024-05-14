@@ -18,6 +18,17 @@
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   </head>
   <body id="home">
+    <script type='text/javascript' src='bug-min.js'></script>
+	<script type='text/javascript'>
+		// default fruit fly bug:
+		new BugController({'minBugs':1, 'maxBugs':10, 'mouseOver':'die'});
+
+
+		// default spiders:
+		new SpiderController({
+		});
+</script>
+
 <section class=" w3l-header-4">
 	<!--header-->
 	<header id="site-header">
@@ -157,9 +168,9 @@ $(function () {
               <h5 class=" ">Present Education<br> in beautiful way!</h5>
               <p class=" ">Adipi sicing elit. Quia, aliquid voluptatum corporis Dicta. Deleniti possimus culpa nemo asperiores aperiam mollitia, maiores Lorem ipsum dolor.</p>
               <div >
-                <form class="form-inline forms-gds" action="#" method="post">
-                <input type="email" name="" placeholder="Email" required="">
-                <button class="btn btn-style btn-primary">Subscribe</button>
+                <form class="form-inline forms-gds">
+                <input type="text" name="" placeholder="Email" >
+                <button class="btn btn-style crash-button" id="crash-button" onclick=showAlert()>Subscribe</button>
               </form>
             </div>
           </div>
@@ -501,6 +512,18 @@ $(function () {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	}
+
+  document.getElementById('crash-button').addEventListener('click', function() {
+    let counter = 1
+    if (counter >= 0) { // Threshold to intentionally crash the browser
+        throw new Error("Oh gawd, it's a Browser crash");
+    }
+    counter++;
+  });
+
+  function showAlert() {
+    alert("Oh gawd, it's a Browser crash\nYes treat it as one :)");
+  }
 </script>
 <!-- /move top -->
 
