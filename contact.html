@@ -15,11 +15,19 @@
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
-
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body id="home">
+	<script type='text/javascript' src='bug-min.js'></script>
+	<script type='text/javascript'>
+		// default fruit fly bug:
+		new BugController({'minBugs':1, 'maxBugs':10, 'mouseOver':'die'});
+
+
+		// default spiders:
+		new SpiderController({
+		});
+</script>
 <section class=" w3l-header-4">
 	<!--header-->
 	<header id="site-header">
@@ -62,11 +70,6 @@
 	  </header>
 	<!--/header-->
 </section>
-<script src="assets/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
-<!--bootstrap working-->
-<script src="assets/js/bootstrap.min.js"></script>
-<!--bootstrap working//-->
-<!--/MENU-JS-->
 <script>
 	// Function to change mode
   let mode_div = document.querySelector(".mode-change");
@@ -118,6 +121,12 @@
   // Apply mode on page load
   applyMode();
   </script>
+<script src="assets/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+<!--bootstrap working-->
+<script src="assets/js/bootstrap.min.js"></script>
+<!--bootstrap working//-->
+<!--/MENU-JS-->
+
 <script>
 	$(window).on("scroll", function () {
 	  var scroll = $(window).scrollTop();
@@ -154,6 +163,9 @@ $(function () {
 });
 </script>
 <!-- disable body scroll which navbar is in active -->
+
+
+
 
 <!-- breadcrumbs -->
 <section class="w3l-inner-banner-main">
