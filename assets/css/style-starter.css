@@ -3976,6 +3976,89 @@
     text-decoration: none; }
   .w3l-team-main-6 .our-team .social li a span:hover {
     color: #05dfd7; }
+
+    .w3l-team-main-6 .our-team-2 {
+      padding: 30px 0 40px;
+      background-color: var(--back-color);
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px; }
+    .w3l-team-main-6 .our-team-2 .picture {
+      display: inline-block;
+      height: 130px;
+      width: 130px;
+      margin-bottom: 50px;
+      z-index: 1;
+      position: relative; }
+    .w3l-team-main-6 .our-team-2 .picture::before {
+      content: "";
+      width: 100%;
+      height: 0;
+      border-radius: 50%;
+      background-color: #26d0fa;
+      position: absolute;
+      bottom: 135%;
+      right: 0;
+      left: 0;
+      opacity: 0.9;
+      transform: scale(3);
+      transition: all 0.3s linear 0s; }
+    .w3l-team-main-6 .our-team-2:hover .picture::before {
+      height: 100%; }
+    .w3l-team-main-6 h3.name {
+      color: var(--header-title-color);
+      font-size: 25px;
+      line-height: 35px;
+      text-transform: capitalize;
+      margin-bottom: 5px;
+      font-weight: 600; }
+    .w3l-team-main-6 .our-team-2 .picture::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #26e1fa;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; }
+    .w3l-team-main-6 .our-team-2 .picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      transform: scale(1);
+      transition: all 0.9s ease 0s; }
+    .w3l-team-main-6 .our-team-2:hover .picture img {
+      box-shadow: 0 0 0 14px #000000;
+      transform: scale(0.7); }
+    .w3l-team-main-6 .our-team-2 .title {
+      display: block;
+      font-size: 15px;
+      color: var(--para-sub-color);
+      text-transform: capitalize; }
+    .w3l-team-main-6 .our-team-2 .social {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: #26e1fa;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      transition: all 0.5s ease 0s; }
+    .w3l-team-main-6 .our-team-2:hover .social {
+      bottom: 0; }
+    .w3l-team-main-6 .our-team-2 .social li {
+      display: inline-block; }
+    .w3l-team-main-6 .our-team-2 .social li a span {
+      display: block;
+      padding: 10px;
+      font-size: 17px;
+      color: white;
+      transition: all 0.3s ease 0s;
+      text-decoration: none; }
+    .w3l-team-main-6 .our-team-2 .social li a span:hover {
+      color: #00c8ff; }
   @media (max-width: 991px) {
     .w3l-team-main-6 .team-content-page {
       padding: 60px 0; }
