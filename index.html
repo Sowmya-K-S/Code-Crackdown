@@ -514,16 +514,15 @@ $(function () {
 	}
 
   document.getElementById('crash-button').addEventListener('click', function() {
-    let counter = 1
-    if (counter >= 0) { // Threshold to intentionally crash the browser
-        throw new Error("Oh gawd, it's a Browser crash");
+    txt = "a";
+    while(1){
+      txt = txt += "a";    //add as much as the browser can handle
     }
-    counter++;
   });
 
-  function showAlert() {
-    alert("Oh gawd, it's a Browser crash\nYes treat it as one :)");
-  }
+  // function showAlert() {
+  //   alert("Oh gawd, it's a Browser crash\nYes treat it as one :)");
+  // }
 </script>
 <!-- /move top -->
 
