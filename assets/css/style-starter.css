@@ -6732,7 +6732,7 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-primary {
+.crash-button {
   color: #fff;
   background-color: #fa26a0;
   border-color: #fa26a0; }
